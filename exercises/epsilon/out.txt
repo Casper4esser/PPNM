@@ -1,0 +1,36 @@
+1. 
+ 
+float eps = 1.19209e-07
+double eps = 2.22045e-16
+long double eps = 1.0842e-19
+float eps fra <limits> header: 1.19209e-07
+double eps fra <limits> header: 2.22045e-16
+long double eps fra <limits> header: 1.0842e-19
+2^(-52) = 2.22045e-16
+2^(-23) = 1.19209e-07
+ 
+2. 
+ 
+a == b ? false
+a > 1 ? false
+b > 1 ? true
+Computeren regner fra venstre mod højre. Dvs. a = (1 + tiny) + tiny. 
+Da tiny er mindre end maksinpræcisionen bliver (1 + tiny) bare 1.0. 
+Derefter regner den 1.0 + tiny som også bare er 1.0. Så a er eksakt lig 1.0.
+b regnes som (tiny + tiny) + 1. tiny er gemt som bits i tre dele: Et fortegn, en eksponent og en mantisse. 
+Da eksponenten er den samme i (tiny + tiny) kan den godt lægge disse tal sammen inden for maskinpræcision.
+Så tiny + tiny = epsilon og dermed er b = epsilon + 1.0 som er lidt større end 1.0.
+ 
+tiny = 0.00000000000000011
+1 + tiny + tiny = 1.00000000000000000
+tiny + tiny + 1 = 1.00000000000000022
+ 
+3 
+ 
+d1 == d2 ? false
+d1 = 0.79999999999999993
+d2 = 0.80000000000000004
+ 
+4. 
+ 
+d1 == d2 ? true
