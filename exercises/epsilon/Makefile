@@ -21,7 +21,7 @@ approx.o: approx.cc approx.h
 	$(CXX) $(CXXFLAGS) -o $@ -c $<
 
 clean:
-	rm -f out.txt main
+	rm -f out.txt main *.o
 
 
 
