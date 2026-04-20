@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     if (myinput.is_open() && myoutput.is_open())
     {
         // myinput >> x fungerer ved at den læser alle tegn i myinput indtil den møder noget som ikke er en double. F.eks. en whitespace eller string.
-        // Så sender den det til x.
+        // Så sender den det til x. Så længe den finder gyldig tekst så er statementet true. Hvis den rammer whitespace eller string er den false. 
         while (myinput >> x)
         {
             myoutput << x << " " << std::sin(x) << " " << std::cos(x) << std::endl;
