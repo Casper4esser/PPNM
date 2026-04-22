@@ -16,8 +16,13 @@ namespace funs
     }
 
     // Fra math exercise
-    constexpr double PI = std::numbers::pi;
-    constexpr double NaN = std::numeric_limits<double>::quiet_NaN();
+    // Konstanter lagt i namespace for at undgå potentielle linker errors, hvis PI eller NaN bruges i andre biblioteker.
+    // Det er nok lige meget for nu, men god praksis.
+    namespace
+    {
+        constexpr double PI = std::numbers::pi;
+        constexpr double NaN = std::numeric_limits<double>::quiet_NaN();
+    }
 
     double fgamma(double x)
     {
@@ -49,9 +54,7 @@ namespace funs
         if (z.real() < 9.0)
             return cgamma(z + 1.0) / z;
 
-        std::complex<double> lncgamma = z * std::log(z) - z + std::log(2.0 * PI / z) / 2.0
-                                        + 1.0 / (12.0 * z) - 1.0 / (360.0 * z * z * z)
-                                        + 1.0 / (1260.0 * z * z * z * z * z);
+        std::complex<double> lncgamma = z * std::log(z) - z + std::log(2.0 * PI / z) / 2.0 + 1.0 / (12.0 * z) - 1.0 / (360.0 * z * z * z) + 1.0 / (1260.0 * z * z * z * z * z);
 
         return std::exp(lncgamma);
     }
