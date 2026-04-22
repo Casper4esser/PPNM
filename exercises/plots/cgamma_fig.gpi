@@ -1,0 +1,18 @@
+set terminal svg size 800, 600 background "white"
+set output "cgamma_fig.svg"
+
+set title "Absolute value of Gamma function |{/Symbol G}(z)| in the complex plane"
+set xlabel "Re(z)"
+set ylabel "Im(z)"
+set zlabel "|{/Symbol G}(z)|"
+
+set view 60, 330, 1, 1
+set hidden3d
+set pm3d
+set palette rgbformulae 33,13,10
+
+set zrange [0:6]
+set cbrange [0:6]
+set xyplane at 0
+
+splot "cgamma_data.txt" using 1:2:3 with pm3d notitle

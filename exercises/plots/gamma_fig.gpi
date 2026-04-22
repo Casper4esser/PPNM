@@ -1,0 +1,10 @@
+set terminal svg size 800, 600 background "white"
+set output "gamma_fig.svg"
+
+set title "gamma function (stirling approximation)"
+set xlabel "x"
+set ylabel "gamma(x)"
+set grid
+
+plot "gamma_data.txt" with lines linewidth 2 title "gamma(x)", \
+     "gamma_points.txt" with points pointtype 7 pointsize 1.5 linecolor "red" title "Points of gamma function"
