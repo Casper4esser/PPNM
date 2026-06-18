@@ -1,0 +1,10 @@
+
+      1.47      0.895       1.05       1.55 
+         0      0.733      0.445      0.717 
+         0          0      0.778      0.393 
+         0          0          0      0.628 
+Er Q^T * T = I? : 1
+Er Q*R = A? : 1
+Er B*x = b? : 1
+Fejl i B*x - b (skal være tæt på 0): 2.99387e-15
+determinanten af R er : 0.00951782
