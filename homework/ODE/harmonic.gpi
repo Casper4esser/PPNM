@@ -1,0 +1,8 @@
+set terminal svg background "white" size 800,600
+set output 'harmonic.svg'
+set title "Harmonic Oscillator (u'' = -u)"
+set xlabel 'Time (t)'
+set ylabel 'Values'
+set grid
+plot 'harmonic.txt' using 1:2 with linespoints pt 7 ps 0.5 title 'Position (u)', \
+     'harmonic.txt' using 1:3 with linespoints pt 7 ps 0.5 title "Velocity (u'')"

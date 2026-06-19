@@ -1,0 +1,8 @@
+set terminal svg background "white" size 800,600
+set output 'lotka_volterra.svg'
+set title 'Lotka-Volterra'
+set xlabel 'Time'
+set ylabel 'Population Size'
+set grid
+plot 'lotka_volterra.txt' using 1:2 with linespoints pt 7 ps 0.5 title 'Prey (Byttedyr)', \
+     'lotka_volterra.txt' using 1:3 with linespoints pt 7 ps 0.5 title 'Predators (Rovdyr)'
