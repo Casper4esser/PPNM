@@ -1,0 +1,12 @@
+set terminal svg background "white" size 800,600
+set output "rutherford_fig.svg"
+
+set title "Rutherford & Soddy (1902) - ThX Decay" font ",14"
+set xlabel "Time (days)"
+set ylabel "Activity (relative units)"
+
+set style line 1 lc rgb "black" pt 7 ps 0.8 lw 1.5   # Sorte prikker til data
+set style line 2 lc rgb "red" lw 2                   # Tyk rød linje til fittet
+
+plot "rutherford_data.txt" using 1:2:3 with yerrorbars ls 1 title "Experimental Data", \
+     "rutherford_fit.txt" using 1:2 with lines ls 2 title "Least-Squares Fit"
