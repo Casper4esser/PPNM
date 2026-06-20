@@ -1,0 +1,12 @@
+f(x) = x^2 - 4 : 
+Rod fundet ved x = 2.00001
+
+Rosenbrock's Valley Function : 
+Minimum for Rosenbrock fundet ved:
+x = 1, y = 1
+
+Himmelblau's Function : 
+Minimum 1 for Himmelblau fundet ved:
+x = -0.270845, y = -0.923039
+Minimum 2 for Himmelblau fundet ved:
+x = -3.77931, y = -3.28319
