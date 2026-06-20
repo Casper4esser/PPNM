@@ -1,0 +1,14 @@
+set terminal svg size 800, 600 background "white"
+set output "erf_convergence.svg"
+
+set title "Convergence of Adaptive Integration for erf(1)"
+set xlabel "Absolute tolerance goal (acc)"
+set ylabel "Absolute error |calculated - exact|"
+
+set logscale xy
+
+set xrange [0.1:1e-9] reverse
+
+set grid
+
+plot "erf_convergence.txt" using 1:2 with linespoints pointtype 7 pointsize 1.5 linecolor "red" linewidth 2 title "Measured Integration Error"

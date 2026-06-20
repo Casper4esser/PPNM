@@ -1,0 +1,15 @@
+int_0^1 sqrt(x) dx = 0.666681
+Forventet: 0.6666... | Kald: 40
+
+int_0^1 1/sqrt(x) dx = 2
+Forventet: 2.0 | Kald: 17140
+
+int_0^1 sqrt(1-x^2) dx = 0.785406
+Forventet: 0.785398 | Kald: 52
+
+int_0^1 ln(x)/sqrt(x) dx = -4
+Forventet: -4.0 | Kald: 29972
+
+Beregnet erf(1) = 0.842729958487199
+Tabuleret erf(1)= 0.84270079294971486934
+
