@@ -5,8 +5,8 @@
 
 int main() {
     // eksempel-data
-    pp::vector x = {1.0, 2.0, 3.0, 4.0, 5.0, 6.0};
-    pp::vector y = {2.1, 2.8, 2.8, 4.5, 5.0, 1.2};
+    pp::vector x = {-4.5, -2.0, -1.0, 1.0, 2.0, 4.5};
+    pp::vector y = {-1, -1, -1, 1, 1, 1};
 
     pp::Akima spline(x, y);
 
