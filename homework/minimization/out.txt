@@ -1,0 +1,9 @@
+Rosenbrock:
+Minimum ved: [0.999953, 0.999905]
+Antal skridt: 13
+f(x,y) = 2.24005e-09
+
+Himmelblau
+Minimum ved: [3, 2.00001]
+Antal skridt: 4
+f(x,y) = 2.06169e-09
