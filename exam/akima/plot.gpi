@@ -1,0 +1,14 @@
+set terminal svg background "white" size 800,600 font "Arial,14"
+set output "akima_plot.svg"
+
+set title "Akima Sub-spline Interpolation"
+set xlabel "x"
+set ylabel "y"
+
+set grid
+
+set key top left
+
+plot \
+    "spline.txt" using 1:2 with lines linetype 1 linewidth 2 linecolor rgb "blue" title "Akima Spline", \
+    "data.txt" using 1:2 with points pointtype 7 pointsize 1.2 linecolor rgb "black" title "Datapunkter"
