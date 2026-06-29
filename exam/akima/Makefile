@@ -3,12 +3,12 @@ CXXFLAGS += -std=c++20 -Wall -Wextra -Werror
 
 .PHONY: all clean
 
-all: akima_plot.svg
+all: akima_plot.svg README.txt
 
 akima_plot.svg: plot.gpi data.txt spline.txt
 	gnuplot $<
 
-data.txt spline.txt: main
+data.txt spline.txt README.txt: main
 	./$<
 
 main: main.o akima.o vector.o
